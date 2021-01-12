@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './tailwind.css';
 
-const Index = () => {
+function Index () {
 	return (
 		<div className="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
 			<div className="sm:flex sm:items-center px-6 py-4">

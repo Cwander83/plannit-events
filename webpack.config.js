@@ -5,7 +5,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.js$/,
+				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
 				use: { loader: 'babel-loader' },
 			},
@@ -13,10 +13,20 @@ module.exports = {
 				test: /\.css$/,
 				use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
 			},
+			{
+				test: /\.(jpg|png)$/,
+				use: {
+					loader: 'url-loader',
+				},
+			},
 		],
 	},
+
 	optimization: {
 		splitChunks: { chunks: 'all' },
+	},
+	devServer: {
+		historyApiFallback: true,
 	},
 	plugins: [
 		new MiniCssExtractPlugin({

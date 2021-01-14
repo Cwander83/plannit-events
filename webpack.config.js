@@ -13,11 +13,20 @@ module.exports = {
 				test: /\.css$/,
 				use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
 			},
+			{
+				test: /\.(jpg|png)$/,
+				use: {
+					loader: 'url-loader',
+				},
+			},
 		],
 	},
-	
+
 	optimization: {
 		splitChunks: { chunks: 'all' },
+	},
+	devServer: {
+		historyApiFallback: true,
 	},
 	plugins: [
 		new MiniCssExtractPlugin({

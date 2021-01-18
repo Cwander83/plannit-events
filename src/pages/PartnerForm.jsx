@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 
+// context api
+import { StateContext } from '../context/context.js';
 const PartnerForm = () => {
+	let { handlePartnerForm, partnerForm } = useContext(StateContext);
+
 	return (
 		<div className="flex flex-col justify-center">
 			<div>
@@ -32,6 +36,7 @@ const PartnerForm = () => {
 								id="name"
 								autoComplete="name"
 								className="mt-1 focus:border-primary focus:ring-0 focus:border-3 focus:text-xl block w-full  text-center text-xl tracking-wider border-gray-dark border-t-0 border-l-0 border-r-0"
+								onChange={(e) => handlePartnerForm(e)}
 							/>
 						</div>
 
@@ -49,12 +54,13 @@ const PartnerForm = () => {
 								id="business_name"
 								autoComplete="organization"
 								className="mt-1 focus:border-primary focus:ring-0 focus:border-3 focus:text-xl block w-full text-center text-xl tracking-wider border-gray-dark border-t-0 border-l-0 border-r-0"
+								onChange={(e) => handlePartnerForm(e)}
 							/>
 						</div>
 
 						<div className="p-3 w-full md:w-1/2">
 							<label
-								htmlFor="email_address"
+								htmlFor="email"
 								className="block text-md md:text-xl font-medium text-gray-darkest"
 							>
 								Email Address
@@ -62,8 +68,8 @@ const PartnerForm = () => {
 							<input
 								required
 								type="text"
-								name="email_address"
-								id="email_address"
+								name="email"
+								id="email"
 								autoComplete="email"
 								className="mt-1 focus:border-primary focus:ring-0 focus:border-3 focus:text-xl block w-full text-center text-xl tracking-wider border-gray-dark border-t-0 border-l-0 border-r-0"
 							/>
@@ -82,6 +88,7 @@ const PartnerForm = () => {
 								name="phone"
 								autoComplete="phone"
 								className="mt-1 focus:border-primary focus:ring-0 focus:border-3 focus:text-xl block w-full text-center text-xl tracking-wider border-gray-dark border-t-0 border-l-0 border-r-0"
+								onChange={(e) => handlePartnerForm(e)}
 							/>
 						</div>
 						<div className="p-3 w-full md:w-1/2">
@@ -97,6 +104,7 @@ const PartnerForm = () => {
 								name="city"
 								autoComplete="city"
 								className="mt-1 focus:border-primary focus:ring-0 focus:border-3 focus:text-xl block w-full text-center text-xl tracking-wider border-gray-dark border-t-0 border-l-0 border-r-0"
+								onChange={(e) => handlePartnerForm(e)}
 							/>
 						</div>
 
@@ -110,11 +118,12 @@ const PartnerForm = () => {
 
 							<input
 								type="url"
-								name="company_website"
-								id="company_website"
+								name="website"
+								id="website"
 								autoComplete="url"
 								className="mt-1 focus:border-primary focus:ring-0 focus:border-3 focus:text-xl block w-full text-center text-xl tracking-wider border-gray-dark border-t-0 border-l-0 border-r-0"
 								placeholder="www.example.com"
+								onChange={(e) => handlePartnerForm(e)}
 							/>
 						</div>
 
@@ -133,10 +142,9 @@ const PartnerForm = () => {
 								rows="2"
 								placeholder="Photographer, Catering, etc.."
 								className="mt-1 focus:border-primary focus:ring-0 focus:border-3 focus:text-xl block w-full text-center text-xl tracking-wider border-gray-dark border-t-0 border-l-0 border-r-0"
+								onChange={(e) => handlePartnerForm(e)}
 							></textarea>
 						</div>
-
-						
 
 						<div className="p-3 w-full md:w-1/2">
 							<label
@@ -151,6 +159,7 @@ const PartnerForm = () => {
 								id="message"
 								rows="2"
 								className="mt-1 focus:border-primary focus:ring-0 focus:border-3 focus:text-xl block w-full text-center text-xl tracking-wider border-gray-dark border-t-0 border-l-0 border-r-0"
+								onChange={(e) => handlePartnerForm(e)}
 							></textarea>
 						</div>
 						<div className="p-3 w-full ">
@@ -162,8 +171,10 @@ const PartnerForm = () => {
 									type="checkbox"
 									name="agreement"
 									id="agreement"
+									checked={partnerForm.agreement}
 									required
 									className=" w-6 h-6 mr-3 focus:border-primary focus:ring-0 focus:border-3 focus:text-xl   text-center text-xl tracking-wider"
+									onChange={(e) => handlePartnerForm(e)}
 								/>
 								Agree to Plannit business terms and acknowledge our privacy
 								rules.

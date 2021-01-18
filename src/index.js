@@ -15,7 +15,7 @@ import './styles/tailwind.css';
 import routes from './routes/routes';
 
 // context api
-import StateContextProvider from './store/context.js';
+import StateContextProvider from './context/context.js';
 
 function Index() {
 	return (

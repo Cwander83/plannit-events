@@ -10,7 +10,7 @@ import Logo from '../images/icons/footer_logo_4.png';
 
 const Footer = () => {
 	return (
-		<footer className="w-full flex flex-col sm:flex-row justify-start items-center bg-primary py-2.5">
+		<footer className=" w-full flex flex-col sm:flex-row justify-start items-center bg-primary py-2.5">
 			<div className="w-full sm:w-1/3 text-center h-full">
 				<div className="flex flex-col text-secondary text-lg w-full sm:w-3/4 mx-auto text-medium sm:text-left h-full my-4 tracking-wider">
 					{links.map((link, index) => {

@@ -15,11 +15,11 @@ import './styles/tailwind.css';
 import routes from './routes/routes';
 
 // context api
-import StateContextProvider from './context/context.js';
+import FormContextProvider from './context/formContext.js';
 
 function Index() {
 	return (
-		<StateContextProvider>
+		<FormContextProvider>
 			<Router>
 				<Layout>
 					<Header />
@@ -27,7 +27,7 @@ function Index() {
 					<Footer />
 				</Layout>
 			</Router>
-		</StateContextProvider>
+		</FormContextProvider>
 	);
 }
 

@@ -1,9 +1,15 @@
 import React, { useState, useContext } from 'react';
 
 // context api
-import { StateContext } from '../context/context.js';
+import { FormContext } from '../context/formContext.js';
+
+import PartnersTermsModal from '../components/PartnersTermsModal.jsx';
 const PartnerForm = () => {
-	let { handlePartnerForm, partnerForm } = useContext(StateContext);
+	let { handlePartnerForm, partnerForm } = useContext(FormContext);
+
+	const [open, setOpen] = useState(false);
+
+	const handleModal = () => setOpen(!open);
 
 	return (
 		<div className="flex flex-col justify-center">
@@ -173,12 +179,18 @@ const PartnerForm = () => {
 									id="agreement"
 									checked={partnerForm.agreement}
 									required
-									className=" w-6 h-6 mr-3 focus:border-primary focus:ring-0 focus:border-3 focus:text-xl   text-center text-xl tracking-wider"
+									className="w-6 h-6 mr-3 text-primary focus:border-primary focus:ring-0 focus:border-3 focus:text-xl   text-center text-xl tracking-wider"
 									onChange={(e) => handlePartnerForm(e)}
 								/>
 								Agree to Plannit business terms and acknowledge our privacy
 								rules.
 							</label>
+							<span
+								onClick={handleModal}
+								className=" pl-2 underline cursor-pointer "
+							>
+								Click here to view agreement
+							</span>
 						</div>
 
 						<div className="p-3 w-full">
@@ -192,6 +204,7 @@ const PartnerForm = () => {
 					</form>
 				</div>
 			</div>
+			<PartnersTermsModal open={open} handleModal={handleModal} />
 		</div>
 	);
 };

@@ -19,6 +19,29 @@ module.exports = {
 					loader: 'url-loader',
 				},
 			},
+			{
+				test: /\.docx$/,
+				use: [
+					{
+						loader: 'docx-loader',
+						options: {
+							removeLinks: true,
+						},
+					},
+				],
+			},
+			{
+				test: /\.svg$/,
+				use: [
+				  {
+					loader: 'svg-url-loader',
+					options: {
+					  limit: 10000,
+					},
+				  },
+				],
+			  },
+			{ test: /\.txt$/, use: 'raw-loader' },
 		],
 	},
 

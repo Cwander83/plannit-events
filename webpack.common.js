@@ -1,7 +1,14 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
+	entry: './src/index.js',
+	output: {
+		path: path.join(__dirname, 'dist'),
+		filename: 'bundle.js',
+	},
 	module: {
 		rules: [
 			{
@@ -33,32 +40,28 @@ module.exports = {
 			{
 				test: /\.svg$/,
 				use: [
-				  {
-					loader: 'svg-url-loader',
-					options: {
-					  limit: 10000,
+					{
+						loader: 'svg-url-loader',
+						options: {
+							limit: 10000,
+						},
 					},
-				  },
 				],
-			  },
+			},
 			{ test: /\.txt$/, use: 'raw-loader' },
 		],
 	},
 
-	optimization: {
-		splitChunks: { chunks: 'all' },
-	},
-	devServer: {
-		historyApiFallback: true,
-	},
 	plugins: [
-		new MiniCssExtractPlugin({
-			filename: 'tailwind.css',
-			chunkFilename: 'tailwind.css',
-		}),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
 			filename: './index.html',
 		}),
+		new MiniCssExtractPlugin({
+			filename: 'tailwind.css',
+			chunkFilename: 'tailwind.css',
+		}),
+
+		new webpack.SourceMapDevToolPlugin({}),
 	],
 };

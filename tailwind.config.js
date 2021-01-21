@@ -5,7 +5,7 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		colors: {
-			primary: '#183859',
+			primary: '#163d59',
 			secondary: '#EFB71B',
 			gray: {
 				lightest: '#fafafa',
@@ -20,17 +20,28 @@ module.exports = {
 			title: ['Comfortaa', 'cursive'],
 			body: ['Poppins', 'sans-serif'],
 		},
+		extend: {
+			height: {
+				108: '36rem',
+				120: '40rem'
+			},
+		},
 	},
 	variants: {
 		extend: {
-			textColor: ['hover', 'focus', 'visited', 'active'],
-			backgroundColor: ['hover', 'focus', 'visited', 'active'],
-			scale: ['hover', 'focus', 'visited', 'active'],
-			textDecoration: ['hover', 'focus', 'visited', 'active'],
-			transform: ['hover', 'focus', 'visited', 'active'],
-			backgroundOpacity: ['hover', 'focus', 'visited', 'active'],
-			outline: ['hover', 'focus', 'visited', 'active'],
+			textColor: ['hover', 'focus', 'active'],
+			backgroundColor: ['hover', 'focus', 'active'],
+			scale: ['hover', 'focus', 'active'],
+			textDecoration: ['hover', 'focus', 'active'],
+			transform: ['hover', 'focus', 'active'],
+			backgroundOpacity: ['hover', 'focus', 'active'],
+			outline: ['hover', 'focus', 'active'],
+			borderColor: ['hover', 'focus', 'active'],
+			borderWidth: ['hover', 'focus', 'active'],
+			ringColor: ['focus'],
+			ringWidth: ['focus'],
+			fontSize: ['focus'],
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/forms')],
 };

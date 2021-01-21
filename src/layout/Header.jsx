@@ -25,7 +25,12 @@ const Header = () => {
 				{links.map((link, index) => {
 					return (
 						<React.Fragment key={index}>
-							<NavHashLink smooth key={index} to={link.location} className="mx-1">
+							<NavHashLink
+								smooth
+								key={index}
+								to={link.location}
+								className="mx-1"
+							>
 								{link.title}
 							</NavHashLink>
 							<span className="text-gray-light">/</span>

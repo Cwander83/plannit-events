@@ -20,6 +20,12 @@ module.exports = {
 			title: ['Comfortaa', 'cursive'],
 			body: ['Poppins', 'sans-serif'],
 		},
+		extend: {
+			height: {
+				108: '36rem',
+				120: '40rem'
+			},
+		},
 	},
 	variants: {
 		extend: {

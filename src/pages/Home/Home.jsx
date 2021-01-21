@@ -8,11 +8,13 @@ import Plan from './HowTo.jsx';
 
 // components
 import FloatingIcon from '../../components/FloatingIcon.jsx';
+import EventAd from '../../components/EventAd.jsx';
 
 const Home = () => {
 	return (
 		<div className="h-full w-full">
 			<Landing />
+			<EventAd />
 			<Categories />
 			<Plan />
 			<About />

@@ -13,7 +13,7 @@ const Landing = () => {
 		<div id="#" className="h-auto ">
 			{/* landing title and header image */}
 			<div
-				className="relative w-full max-h-screen h-96 shadow-md"
+				className="relative w-full max-h-screen h-108 lg:h-120 shadow-md"
 				style={{
 					background: `linear-gradient(
 					rgba(0, 0, 0, 0.5),
@@ -24,23 +24,26 @@ const Landing = () => {
 					backgroundPosition: 'center',
 				}}
 			>
-				<h1 className="absolute bottom-18 left-6 md:bottom-12 md:left-14 text-xl sm:text-2xl md:text-4xl text-gray-lightest font-medium tracking-wide">
+				<h1 className="absolute bottom-20 left-6 md:bottom-12 md:left-14 text-xl sm:text-2xl md:text-4xl text-gray-lightest font-medium tracking-wide">
 					Plannit's Event Planning
 				</h1>
-				<h2 className="absolute bottom-4 text-xl text-secondary font-medium antialiased w-full text-center">
+				<h2 className="absolute bottom-4 text-lg lg:text-xl text-secondary font-medium antialiased w-full text-left pl-12 pr-3 lg:pl-20">
 					Plannit provides the convenience of creating your own event.
 				</h2>
 			</div>
 			{/* information and links */}
 
 			<div className="flex flex-row  w-full mt-6">
-				<div className=" flex flex-col justify-center item-center ml-10 sm:ml-12 md:ml-36">
-					<h1 className="text-black text-xl uppercase font-bold text-left">
+				<div className=" flex flex-col justify-center item-center ml-10 sm:ml-8 md:ml-16 lg:ml-36">
+					<h1 className="text-black text-lg lg:text-2xl tracking-wider uppercase font-bold text-left pr-14 pl-8">
 						Extraordinary moments are created together.
 					</h1>
-					<h2 className="text-black uppercase font-bold text-center">
-						Planning an event has never been easy.
-					</h2>
+					<p className="transition-all ease-in-out duration-1000 transform translate-x-0 text-black text-base lg:text-lg tracking-wide mt-5 pl-8 pr-16">
+						Plannit is an all-inclusive event-planning business where our
+						customers come to us as a single source to plan their extraordinary
+						moment. Extraordinary moments are created by each customer’s
+						individuality &#38; uniqueness.
+					</p>
 				</div>
 			</div>
 		</div>

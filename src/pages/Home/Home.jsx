@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 
 // sections
-import Landing from './Landing.jsx';
-import Categories from './Categories.jsx';
-import About from './About.jsx';
-import Plan from './HowTo.jsx';
+const Landing = lazy(() => import('./Landing.jsx'));
+const Categories = lazy(() => import('./Categories.jsx'));
+const About = lazy(() => import('./About.jsx'));
+const Plan = lazy(() => import('./HowTo.jsx'));
 
 // components
 import FloatingIcon from '../../components/FloatingIcon.jsx';
 import EventAd from '../../components/EventAd.jsx';
+import Loading from '../../components/Loading.jsx';
 
 const Home = () => {
 	return (
 		<div className="h-full w-full">
-			<Landing />
-			<EventAd />
-			<Categories />
-			<Plan />
-			<About />
-			<FloatingIcon />
+			<Suspense fallback={<Loading />}>
+				<Landing />
+				<EventAd />
+				<Categories />
+				<Plan />
+				<About />
+				<FloatingIcon />
+			</Suspense>
 		</div>
 	);
 };

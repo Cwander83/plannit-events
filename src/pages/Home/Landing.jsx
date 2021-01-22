@@ -33,12 +33,12 @@ const Landing = () => {
 			</div>
 			{/* information and links */}
 
-			<div className="flex flex-row  w-full mt-6">
-				<div className=" flex flex-col justify-center item-center ml-10 sm:ml-8 md:ml-16 lg:ml-36">
-					<h1 className="text-black text-lg lg:text-2xl tracking-wider uppercase font-bold text-left pr-14 pl-8">
+			<div className="flex flex-row  w-full my-10">
+				<div className=" flex flex-col justify-center item-center mx-8">
+					<h1 className="text-black text-xl lg:text-3xl tracking-wider uppercase font-bold text-left ">
 						Extraordinary moments are created together.
 					</h1>
-					<p className="transition-all ease-in-out duration-1000 transform translate-x-0 text-black text-base lg:text-lg tracking-wide mt-5 pl-8 pr-16">
+					<p className="transition-all ease-in-out duration-1000 transform translate-x-0 text-black text-lg lg:text-xl tracking-wide mt-5">
 						Plannit is an all-inclusive event-planning business where our
 						customers come to us as a single source to plan their extraordinary
 						moment. Extraordinary moments are created by each customer’s

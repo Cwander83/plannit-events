@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 const Terms = () => (
 	<>
-		
 		{/* <p>Last updated: January 18, 2021</p> */}
 		<p>
 			Please read these terms and conditions carefully before using Our Service.
@@ -296,4 +295,4 @@ const Terms = () => (
 	</>
 );
 
-export default Terms;
+export default memo(Terms);

@@ -1,5 +1,8 @@
 import React from 'react';
+
 import Divider from '../../components/Divider.jsx';
+import SplitSection from '../../components/SplitSection.jsx';
+import imageDj from '../../images/dancing-4.jpg';
 
 const Categories = () => {
 	return (
@@ -18,13 +21,39 @@ const Categories = () => {
 						everyone in between because we understand how precious your time is.
 					</p>
 				</div>
+				{/* <div className="flex flex-row justify-center h-96">
+					<div className="w-2/3 flex items-center justify-center">
+						<h2>DJ Entertainment</h2>
+					</div>
+					<div className="w-1/3 flex items-center justify-center">
+						<img
+							className="rounded-full shadow-lg w-60 h-60"
+							src={imageDj}
+							alt=""
+						/>
+					</div>
+				</div> */}
+				<SplitSection
+					primarySlot={
+						<div className="lg:pr-28 xl:pr-36">
+							<h3 className="text-3xl font-semibold leading-tight">
+								Entertainment
+							</h3>
+							<p className="mt-8 text-xl text-gray-dark leading-relaxed">
+								Our team of enthusiastic marketers will analyse and evaluate how
+								your company stacks against the closest competitors
+							</p>
+						</div>
+					}
+					secondarySlot={<img className=" w-auto" src={imageDj} alt="" />}
+				/>
 
-				<div className="mt-10">
+				{/* <div className="mt-10">
 					<dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
 						<div className="flex">
 							<div className="flex-shrink-0">
 								<div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-									{/* <!-- Heroicon name: globe-alt --> */}
+									
 									<svg
 										className="h-6 w-6"
 										xmlns="http://www.w3.org/2000/svg"
@@ -52,11 +81,11 @@ const Categories = () => {
 									Examples: DJ, live band, clown, etc.
 								</dd>
 							</div>
-						</div>
-						<div className="flex">
+						</div> */}
+				{/* <div className="flex">
 							<div className="flex-shrink-0">
 								<div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-									{/* <!-- Heroicon name: scale --> */}
+									
 									<svg
 										className="h-6 w-6"
 										xmlns="http://www.w3.org/2000/svg"
@@ -83,12 +112,12 @@ const Categories = () => {
 									setups, tents, to adventurous bounce houses.
 								</dd>
 							</div>
-						</div>
+						</div> */}
 
-						<div className="flex">
+				{/* <div className="flex">
 							<div className="flex-shrink-0">
 								<div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-									{/* <!-- Heroicon name: lightning-bolt --> */}
+									
 									<svg
 										className="h-6 w-6"
 										xmlns="http://www.w3.org/2000/svg"
@@ -117,12 +146,12 @@ const Categories = () => {
 									etc.
 								</dd>
 							</div>
-						</div>
+						</div> */}
 
-						<div className="flex">
+				{/* <div className="flex">
 							<div className="flex-shrink-0">
 								<div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-									{/* <!-- Heroicon name: annotation --> */}
+									
 									<svg
 										className="h-6 w-6"
 										xmlns="http://www.w3.org/2000/svg"
@@ -150,9 +179,9 @@ const Categories = () => {
 									cupiditate blanditiis ratione.
 								</dd>
 							</div>
-						</div>
-					</dl>
-				</div>
+						</div> */}
+				{/* </dl> */}
+				{/* </div> */}
 			</div>
 		</div>
 	);

@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import image from '../../images/landing_image.jpg';
-import image2 from '../../images/small-2.jpg';
 
 const Landing = () => {
-	const [width, setWidth] = useState(null);
-
-	useEffect(() => {
-		setWidth({ width: window.innerWidth });
-	}, []);
 	return (
 		<div id="#" className="h-auto ">
 			{/* landing title and header image */}
@@ -33,7 +27,7 @@ const Landing = () => {
 			</div>
 			{/* information and links */}
 
-			<div className="flex flex-row  w-full my-10">
+			<div className="flex flex-row  w-full my-10 lg:px-20">
 				<div className=" flex flex-col justify-center item-center mx-8">
 					<h1 className="text-black text-xl lg:text-3xl tracking-wider uppercase font-bold text-left ">
 						Extraordinary moments are created together.

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 // react router
 import { Link } from 'react-router-dom';
@@ -34,4 +34,4 @@ const EventAd = () => (
 		</div>
 	</div>
 );
-export default EventAd;
+export default memo(EventAd);

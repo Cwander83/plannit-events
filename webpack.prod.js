@@ -1,10 +1,19 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
+
 module.exports = merge(common, {
 	mode: 'production',
+	// optimization: {
+	// 	splitChunks: { chunks: 'all' },
+	// },
 	optimization: {
-		splitChunks: { chunks: 'all' },
+		splitChunks: {
+			cacheGroups: {
+				default: false,
+				vendors: false,
+			}
+		}
 	},
 	devtool: 'source-map',
 });

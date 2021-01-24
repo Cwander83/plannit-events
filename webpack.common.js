@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const path = require('path');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+// 	.BundleAnalyzerPlugin;
 
 module.exports = {
 	entry: './src/index.js',
@@ -63,5 +65,6 @@ module.exports = {
 		}),
 
 		new webpack.SourceMapDevToolPlugin({}),
+		//new BundleAnalyzerPlugin(),
 	],
 };

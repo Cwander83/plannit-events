@@ -9,12 +9,12 @@ const Plan = lazy(() => import('./HowTo.jsx'));
 // components
 import FloatingIcon from '../../components/FloatingIcon.jsx';
 import EventAd from '../../components/EventAd.jsx';
-import Loading from '../../components/Loading.jsx';
+//import Loading from '../../components/Loading.jsx';
 
 const Home = () => {
 	return (
 		<div className="h-full w-full">
-			<Suspense fallback={<Loading />}>
+			<Suspense fallback={<div></div>}>
 				<Landing />
 				<EventAd />
 				<Categories />

@@ -14,7 +14,7 @@ import EventAd from '../../components/EventAd.jsx';
 const Home = () => {
 	return (
 		<div className="h-full w-full">
-			<Suspense fallback={<div></div>}>
+			<Suspense fallback={<div className="min-h-screen"></div>}>
 				<Landing />
 				<EventAd />
 				<Categories />

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Aos from 'aos';
+
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 // components
@@ -10,7 +12,7 @@ import Footer from './layout/Footer.jsx';
 
 // styles
 import './styles/tailwind.css';
-
+import 'aos/dist/aos.css';
 // routes
 import routes from './routes/routes';
 
@@ -18,6 +20,9 @@ import routes from './routes/routes';
 import FormContextProvider from './context/formContext.js';
 
 function Index() {
+	Aos.init({
+		easing: 'ease-in-out'
+	});
 	return (
 		<FormContextProvider>
 			<Router>

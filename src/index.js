@@ -21,8 +21,12 @@ import FormContextProvider from './context/formContext.js';
 
 function Index() {
 	Aos.init({
-		easing: 'ease-in-out'
+		easing: 'ease-in-out',
 	});
+
+	React.useEffect(() => {
+		Aos.refresh();
+	}, []);
 	return (
 		<FormContextProvider>
 			<Router>

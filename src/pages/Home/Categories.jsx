@@ -16,6 +16,7 @@ const Categories = () => {
 				everyone in between because we understand how precious your time is."
 				/>
 				<SplitSection
+					fade="fade-right"
 					primarySlot={
 						<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
 							<h3 className="text-3xl font-semibold leading-tight">
@@ -32,6 +33,7 @@ const Categories = () => {
 					}
 				/>
 				<SplitSection
+					fade="fade"
 					reverseOrder
 					primarySlot={
 						<div className="lg:pl-16 xl:pl-40 lg:pr-4 xl:pr-20">
@@ -49,6 +51,7 @@ const Categories = () => {
 					}
 				/>
 				<SplitSection
+					fade="fade-right"
 					primarySlot={
 						<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
 							<h3 className="text-3xl font-semibold leading-tight">
@@ -65,6 +68,7 @@ const Categories = () => {
 					}
 				/>
 				<SplitSection
+					fade="fade"
 					reverseOrder
 					primarySlot={
 						<div className="lg:pl-16 xl:pl-40 lg:pr-4 xl:pr-20">

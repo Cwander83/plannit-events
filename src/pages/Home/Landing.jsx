@@ -14,8 +14,8 @@ const Landing = () => {
 					rgba(0, 0, 0, 0.5)
 				  ),url(${image})`,
 					backgroundRepeat: 'no-repeat',
-					backgroundSize: 'contain',
-					backgroundPosition: 'auto',
+					backgroundSize: 'cover',
+					backgroundPosition: 'center',
 					backgroundAttachment: "fixed"
 				}}
 			>

@@ -1,12 +1,13 @@
 import React from 'react';
 import SectionTitle from '../../components/SectionTitle.jsx';
-import SplitSection from '../../components/SplitSection.jsx';
+import StepSection from '../../components/StepSection.jsx';
+
 import Image from '../../images/landing_image.jpg';
 
 const HowTo = () => {
 	return (
 		<div id="how-to-plan" className="py-12">
-			<div className=" max-w-full mx-auto px-4 sm:px-6 lg:px-0 ">
+			<div className=" max-w-full mx-auto px-0 sm:px-6 lg:px-0 ">
 				<SectionTitle title="How to Create Your Event" />
 				<div
 					className="w-full h-auto"
@@ -21,55 +22,48 @@ const HowTo = () => {
 						backgroundAttachment: 'fixed',
 					}}
 				>
-					<SplitSection
-						fade="fade-up"
-						delay="100"
-						width="w-1/4"
-						primarySlot={
-							<div className="w-full h-56   bg-primary ">
-								<h1 className="text-center text-3xl">Step 1</h1>
-							</div>
-						}
-						secondarySlot={
-							<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
-								<h3 className="text-3xl font-semibold leading-tight">
-									Entertainment
-								</h3>
-							</div>
-						}
-					/>
-					<SplitSection
-						fade="fade"
-						width="w-1/4"
-						primarySlot={
-							<div className="w-full h-56   bg-primary ">
-								<h1 className="text-center text-3xl">Step 1</h1>
-							</div>
-						}
-						secondarySlot={
-							<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
-								<h3 className="text-3xl font-semibold leading-tight">
-									Entertainment
-								</h3>
-							</div>
-						}
-					/>
-					<SplitSection
-						fade="fade"
-						width="w-1/4"
-						primarySlot={
-							<div className="w-full h-56   bg-primary ">
-								<h1 className="text-center text-3xl">Step 1</h1>
-							</div>
-						}
-						secondarySlot={
-							<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
-								<h3 className="text-3xl font-semibold leading-tight">
-									Entertainment
-								</h3>
-							</div>
-						}
-					/>
+					{/* <!-- component --> */}
+
+					<div className="relative wrap overflow-hidden px-4 sm:px-10 py-2 h-full">
+						<div
+							className="border-2-2 left-1/2 absolute border-opacity-20 bg-gray-lightest border-gray-lightest  border h-5/6 "
+							// style={{left: "50%"}}
+						></div>
+						{/* <!-- right timeline --> */}
+						<StepSection
+							step="1"
+							title="event builder"
+							description="Lorem Ipsum is simply dummy text of the printing and
+					typesetting industry."
+						/>
+
+						{/* <!-- left timeline --> */}
+
+						<StepSection
+							reverse
+							step="2"
+							title="event builder"
+							description="Lorem Ipsum is simply dummy text of the printing and
+					typesetting industry."
+						/>
+						{/* <!-- right timeline --> */}
+						<StepSection
+							step="3"
+							title="event builder"
+							description="Lorem Ipsum is simply dummy text of the printing and
+					typesetting industry."
+						/>
+
+						{/* <!-- left timeline --> */}
+
+						<StepSection
+							reverse
+							step="4"
+							title="event builder"
+							description="Lorem Ipsum is simply dummy text of the printing and
+					typesetting industry."
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

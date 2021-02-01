@@ -77,7 +77,7 @@ export default function HamburgerMenu() {
 						<Menu.Item>
 							<Link
 								to="/partner-form"
-								className="w-full text-center  text-secondary text-sm rounded tracking-wider flex flex-row justify-center p-3 bg-primary"
+								className="w-full text-center  text-secondary text-sm  tracking-wider flex flex-row justify-center p-3 bg-primary"
 							>
 								<p>Partner with Plannit</p>
 							</Link>

@@ -1,14 +1,14 @@
 export const links = [
 	{
 		title: "Plannit's Services",
-		location: '/home#categories',
+		location: '/#categories',
 	},
 	{
 		title: 'How to Plan',
-		location: '/home#how-to-plan',
+		location: '/#how-to-plan',
 	},
 	{
 		title: 'About Us',
-		location: '/home#about',
+		location: '/#about',
 	},
 ];

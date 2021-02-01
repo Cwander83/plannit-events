@@ -23,7 +23,10 @@ module.exports = {
 		extend: {
 			height: {
 				108: '36rem',
-				120: '40rem'
+				120: '40rem',
+			},
+			lineHeight: {
+				0: '0',
 			},
 		},
 	},

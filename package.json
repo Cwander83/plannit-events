@@ -2,12 +2,13 @@
 	"name": "plannit-events",
 	"version": "1.0.0",
 	"description": "",
+	"homepage": "https://cwander83.github.io/plannit-events/",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "webpack --mode development",
-		"start": "webpack serve --mode development",
-		"build": "webpack --mode production"
+		"start": "webpack serve --hot --config webpack.dev.js",
+		"deploy": "gh-pages -d dist",
+		"build": "webpack --config webpack.prod.js"
 	},
 	"repository": {
 		"type": "git",
@@ -19,17 +20,19 @@
 	"bugs": {
 		"url": "https://github.com/Cwander83/plannit-events/issues"
 	},
-	"homepage": "https://github.com/Cwander83/plannit-events#readme",
 	"devDependencies": {
 		"@babel/cli": "^7.12.10",
 		"@babel/core": "^7.12.10",
 		"@babel/preset-env": "^7.12.11",
 		"@babel/preset-react": "^7.12.10",
+		"@fullhuman/postcss-purgecss": "^4.0.0",
+		"@headlessui/react": "^0.2.0",
 		"@tailwindcss/forms": "^0.2.1",
 		"autoprefixer": "^10.2.1",
 		"babel-loader": "^8.2.2",
 		"css-loader": "^5.0.1",
 		"docx-loader": "^1.0.4",
+		"gh-pages": "^3.1.0",
 		"html-loader": "^1.3.2",
 		"html-webpack-plugin": "^4.5.1",
 		"mini-css-extract-plugin": "^1.3.3",
@@ -42,13 +45,14 @@
 		"tailwindcss": "^2.0.2",
 		"url-loader": "^4.1.1",
 		"webpack": "^5.12.3",
+		"webpack-bundle-analyzer": "^4.4.0",
 		"webpack-cli": "^4.3.1",
-		"webpack-dev-server": "^3.11.1"
+		"webpack-dev-server": "^3.11.1",
+		"webpack-merge": "^5.7.3"
 	},
 	"dependencies": {
-		"@headlessui/react": "^0.2.0",
+		"aos": "^2.3.4",
 		"express": "^4.17.1",
-		"moment": "^2.29.1",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"react-router-dom": "^5.2.0",

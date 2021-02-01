@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
 // icon
-import Logo from '../images/icons/logo_header.png';
+import Logo from '../images/icons/logo_header-2.png';
 
 import HamburgerMenu from '../components/HamburgerMenu.jsx';
 
@@ -44,7 +44,7 @@ const Header = () => {
 
 			<Link
 				to="/partner-form"
-				className="hidden shadow-lg mr-9 text-secondary text-sm rounded tracking-wider lg:flex flex-row p-3 bg-primary
+				className="hidden shadow-sm mr-9 text-secondary text-sm rounded tracking-wider lg:flex flex-row p-3 bg-primary
 		  hover:bg-opacity-80 hover:text-opacity-100 active:bg-opacity-100"
 			>
 				<p>Partner with</p>

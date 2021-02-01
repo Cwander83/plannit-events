@@ -7,7 +7,7 @@ import Image from '../../images/landing_image.jpg';
 const HowTo = () => {
 	return (
 		<div id="how-to-plan" className="py-12">
-			<div className=" max-w-full mx-auto px-0 sm:px-6 lg:px-0 ">
+			<div className=" max-w-full mx-auto px-0">
 				<SectionTitle title="How to Create Your Event" />
 				<div
 					className="w-full h-auto"

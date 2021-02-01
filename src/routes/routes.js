@@ -8,10 +8,8 @@ import PartnerForm from '../pages/PartnerForm.jsx';
 
 const routes = (
 	<>
-		<Route exact path="/">
-			<Redirect to="/home" />
-		</Route>
-		<Route path="/home" component={Home} />
+		
+		<Route exact path="/" component={Home} />
 		<Route path="/event-builder" component={EventForm} />
 		<Route path="/partner-form" component={PartnerForm} />
 	</>

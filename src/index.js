@@ -26,10 +26,12 @@ function Index() {
 
 	React.useEffect(() => {
 		Aos.refresh();
+
 	}, []);
+	
 	return (
 		<FormContextProvider>
-			<Router>
+			<Router basename={"/plannit-events/"}>
 				<Layout>
 					<Header />
 					<Switch>{routes}</Switch>

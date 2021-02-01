@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
+
 import image from '../../images/landing_image.jpg';
 
 const Landing = () => {
@@ -16,7 +19,7 @@ const Landing = () => {
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
-					backgroundAttachment: "fixed"
+					backgroundAttachment: 'fixed',
 				}}
 			>
 				{/* <h1 className="absolute bottom-40 left-6 md:bottom-30 md:left-14 text-xl sm:text-2xl md:text-4xl text-gray-lightest font-medium tracking-wide">
@@ -32,12 +35,19 @@ const Landing = () => {
 				 add a button in the middle of the image 
 				 says start planning
 				 */}
-				<button className="absolute bottom-10 left-12 sm:left-28 text-secondary shadow-md uppercase rounded-sm bg-primary text-semibold px-2 py-2 tracking-wider text-sm ">
+				<Link
+					to="/event-builder"
+					className="absolute bottom-10 left-10 sm:left-28 text-secondary shadow-md uppercase rounded-sm bg-primary text-bold px-2 py-2 tracking-wider text-base "
+				>
 					start planning
-				</button>
-				<button className="absolute bottom-10  left-52 sm:left-72 text-primary shadow-md  uppercase rounded-sm bg-secondary text-semibold  px-4 py-2 tracking-wider text-sm">
+				</Link>
+				<NavHashLink
+					smooth
+					to="/home#about"
+					className="absolute bottom-10  left-52 sm:left-72 text-primary shadow-md  uppercase rounded-sm bg-secondary text-bold  px-4 py-2 tracking-wider text-base"
+				>
 					learn more
-				</button>
+				</NavHashLink>
 			</div>
 			{/* information and links */}
 

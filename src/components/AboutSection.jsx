@@ -15,11 +15,13 @@ const AboutSection = ({
 			data-aos-once="false"
 			data-aos-duration="600"
 			data-aos-mirror="true"
-			className="w-auto mx-0 items-center justify-center flex flex-col lg:flex-row py-4 lg:py-6"
+			className="w-auto mx-0 items-center justify-center flex flex-col"
 		>
-			<div className="lg:w-1/3 flex  ">{primarySlot}</div>
+			<div className=" flex justify-center md:justify-start w-full">
+				{primarySlot}
+			</div>
 			<div
-				className={`mt-10 lg:mt-0 w-full lg:w-2/3 ${
+				className={`mt-0 w-full  ${
 					reverseOrder && `order-last lg:order-first`
 				}`}
 			>

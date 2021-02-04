@@ -5,15 +5,32 @@ import Container from '../container/Container.jsx';
 const EventForm = () => {
 	return (
 		<Container padded>
-			<div className="h-auto w-4/5 border-black border-2 mx-auto text-center">
-				<label htmlFor="type-of-event">
-					type of event
-					<input required type="text" name="type-of-event" id="type-of-event" />
-				</label>
-				<label htmlFor="number-of-guests">
-					# of guests
-					<input required type="text" name="number-of-guests" id="number-of-guests" />
-				</label>
+			<div className="h-auto w-4/5 border-black border-2 mx-auto text-center flex flex-col">
+				{/* type of event */}
+				<div className="">
+					<label htmlFor="type-of-event">
+						type of event
+						<input
+							required
+							type="text"
+							name="type-of-event"
+							id="type-of-event"
+						/>
+					</label>
+				</div>
+				{/* number of guests */}
+				<div className="">
+					<label htmlFor="number-of-guests">
+						# of guests
+						<input
+							required
+							type="text"
+							name="number-of-guests"
+							id="number-of-guests"
+						/>
+					</label>
+				</div>
+				{/* budget of event */}
 				<div>
 					<label
 						htmlFor="price"
@@ -35,6 +52,8 @@ const EventForm = () => {
 						</div>
 					</label>
 				</div>
+				{/* date of event */}
+
 				<div className="relative w-1/2 focus-within:text-gray-600 text-gray-400">
 					<label htmlFor="date">
 						Date:
@@ -64,6 +83,8 @@ const EventForm = () => {
 						</div>
 					</label>
 				</div>
+
+				{/* time of event */}
 				<div className="relative w-1/2 focus-within:text-gray-600 text-gray-400">
 					<label htmlFor="time">
 						time:
@@ -93,13 +114,23 @@ const EventForm = () => {
 						</div>
 					</label>
 				</div>
-				<label htmlFor="services" className="">
-					<input type="checkbox" name="dj" id="dj"/> DJ
-					<input type="checkbox" name="dj" id="dj"/> Cake
-					<input type="checkbox" name="dj" id="dj"/> Catering
-					<input type="checkbox" name="dj" id="dj"/> Music
-					<input type="checkbox" name="dj" id="dj"/>
-				</label>
+				<div className="flex flex-col justify-center">
+					<label htmlFor="services" className="">
+						<input type="checkbox" name="dj" id="dj" /> DJ
+					</label>
+					<label htmlFor="services" className="">
+						<input type="checkbox" name="dj" id="dj" /> Cake
+					</label>
+					<label htmlFor="services" className="">
+						<input type="checkbox" name="dj" id="dj" /> Catering
+					</label>
+					<label htmlFor="services" className="">
+						<input type="checkbox" name="dj" id="dj" /> Music
+					</label>
+					<label htmlFor="services" className="">
+						<input type="checkbox" name="dj" id="dj" />
+					</label>
+				</div>
 			</div>
 		</Container>
 	);

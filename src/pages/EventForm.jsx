@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Container from '../container/Container.jsx';
 
 const EventForm = () => {
+	const [locationCheckbox, setLocationCheckbox] = useState(false);
+
+	console.log('checkbox ' + locationCheckbox);
+
+	const handleLocationCheckbox = () => setLocationCheckbox(!locationCheckbox);
+
 	return (
 		<Container padded>
 			<div className="h-auto w-4/5 border-black border-2 mx-auto text-center flex flex-col">
@@ -28,6 +34,32 @@ const EventForm = () => {
 							name="number-of-guests"
 							id="number-of-guests"
 						/>
+					</label>
+				</div>
+				{/* location of event checkbox */}
+				<div className="">
+					<label htmlFor="event-location-check">
+						Do you have somewhere to host event
+						<input
+							type="checkbox"
+							checked={locationCheckbox}
+							name="event-location-check"
+							id="event-location-check"
+							onChange={handleLocationCheckbox}
+						/>
+					</label>
+				</div>
+				{/* location of event */}
+				<div className={`${locationCheckbox ? ' ' : 'hidden'}`}>
+					<label htmlFor="event-location">
+						where is event hosted at
+						<textarea
+							required
+							type="text"
+							name="event-location"
+							id="event-location"
+							rows="2"
+						></textarea>
 					</label>
 				</div>
 				{/* budget of event */}
@@ -115,20 +147,61 @@ const EventForm = () => {
 					</label>
 				</div>
 				<div className="flex flex-col justify-center">
-					<label htmlFor="services" className="">
-						<input type="checkbox" name="dj" id="dj" /> DJ
+					<label htmlFor="services-entertainment" className="">
+						<input
+							type="checkbox"
+							name="services-entertainment"
+							id="services-entertainment"
+						/>{' '}
+						Entertainment
 					</label>
-					<label htmlFor="services" className="">
-						<input type="checkbox" name="dj" id="dj" /> Cake
+					<label htmlFor="services-event-rentals" className="">
+						<input
+							type="checkbox"
+							name="services-event-rentals"
+							id="services-event-rentals"
+						/>{' '}
+						Event Rentals
 					</label>
-					<label htmlFor="services" className="">
-						<input type="checkbox" name="dj" id="dj" /> Catering
+					<label htmlFor="services-floral-arrangements" className="">
+						<input
+							type="checkbox"
+							name="services-floral-arrangements"
+							id="services-floral-arrangements"
+						/>{' '}
+						Floral Arrangements
 					</label>
-					<label htmlFor="services" className="">
-						<input type="checkbox" name="dj" id="dj" /> Music
+					<label htmlFor="services-food" className="">
+						<input type="checkbox" name="services-food" id="services-food" />{' '}
+						Food
 					</label>
-					<label htmlFor="services" className="">
-						<input type="checkbox" name="dj" id="dj" />
+					<label htmlFor="services-desserts" className="">
+						<input
+							type="checkbox"
+							name="services-desserts"
+							id="services-desserts"
+						/>
+						Gourmet Desserts
+					</label>
+					<label htmlFor="services-photographer" className="">
+						<input
+							type="checkbox"
+							name="services-photographer"
+							id="services-photographer"
+						/>
+						Photography
+					</label>
+					<label htmlFor="services-videographer" className="">
+						<input
+							type="checkbox"
+							name="services-videographer"
+							id="services-videographer"
+						/>
+						Videographer
+					</label>
+					<label htmlFor="services-theme" className="">
+						<input type="checkbox" name="services-theme" id="services-theme" />
+						Theme/Decorations
 					</label>
 				</div>
 			</div>

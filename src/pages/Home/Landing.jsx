@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
-import image from '../../images/landing_image.jpg';
+import image from '../../images/landing_image-min.jpg';
 
 const Landing = () => {
 	return (

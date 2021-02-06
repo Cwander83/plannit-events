@@ -11,7 +11,7 @@ const About = () => {
 			</div>
 			<AboutSection
 				primarySlot={
-					<div className=" md:ml-10">
+					<div className="md:ml-24 lg:ml-32">
 						<h3 className="text-2xl font-semibold leading-tight w-full">
 							What is Plannit?
 						</h3>
@@ -38,7 +38,7 @@ const About = () => {
 			/>
 			<AboutSection
 				primarySlot={
-					<div className=" md:ml-10">
+					<div className=" md:ml-24 lg:ml-32">
 						<h3 className="text-2xl font-semibold leading-tight">
 							Who We Are.
 						</h3>
@@ -61,7 +61,7 @@ const About = () => {
 			/>
 			<AboutSection
 				primarySlot={
-					<div className=" md:ml-10">
+					<div className=" md:ml-24 lg:ml-32">
 						<h3 className="text-2xl font-semibold leading-tight">
 							Who Do We Cater To?
 						</h3>

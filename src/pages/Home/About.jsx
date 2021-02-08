@@ -11,14 +11,14 @@ const About = () => {
 			</div>
 			<AboutSection
 				primarySlot={
-					<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
-						<h3 className="text-3xl font-semibold leading-tight">
+					<div className="md:ml-24 lg:ml-32">
+						<h3 className="text-2xl font-semibold leading-tight w-full">
 							What is Plannit?
 						</h3>
 					</div>
 				}
 				secondarySlot={
-					<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
+					<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20 md:mx-28 md:mb-8">
 						<p className="mt-8 text-xl text-gray-dark leading-relaxed">
 							&emsp;
 							<span className="text-black text-3xl text-bold font-title">
@@ -37,16 +37,15 @@ const About = () => {
 				}
 			/>
 			<AboutSection
-				reverseOrder
 				primarySlot={
-					<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
-						<h3 className="text-3xl font-semibold leading-tight">
+					<div className=" md:ml-24 lg:ml-32">
+						<h3 className="text-2xl font-semibold leading-tight">
 							Who We Are.
 						</h3>
 					</div>
 				}
 				secondarySlot={
-					<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
+					<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20 md:mx-28 md:mb-8">
 						<p className="mt-8 text-xl text-gray-dark leading-relaxed">
 							&emsp;
 							<span className="text-black text-3xl text-bold font-title">
@@ -62,14 +61,14 @@ const About = () => {
 			/>
 			<AboutSection
 				primarySlot={
-					<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
-						<h3 className="text-3xl font-semibold leading-tight">
+					<div className=" md:ml-24 lg:ml-32">
+						<h3 className="text-2xl font-semibold leading-tight">
 							Who Do We Cater To?
 						</h3>
 					</div>
 				}
 				secondarySlot={
-					<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
+					<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20 md:mx-28 md:mb-8">
 						<p className="mt-8 text-xl text-gray-dark leading-relaxed">
 							To Our Customers: <br />
 							&emsp;

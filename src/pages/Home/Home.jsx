@@ -16,9 +16,9 @@ const Home = () => {
 		<div className="h-full w-full">
 			<Suspense fallback={<div className="min-h-screen"></div>}>
 				<Landing />
-				<EventAd />
 				<Categories />
 				<Plan />
+				<EventAd />
 				<About />
 				<FloatingIcon />
 			</Suspense>

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
-import image from '../../images/landing_image.jpg';
+import image from '../../images/landing_image-min.jpg';
 
 const Landing = () => {
 	return (
@@ -43,7 +43,7 @@ const Landing = () => {
 				</Link>
 				<NavHashLink
 					smooth
-					to="/home#about"
+					to="/#about"
 					className="absolute bottom-10  left-52 sm:left-72 text-primary shadow-md  uppercase rounded-sm bg-secondary text-bold  px-4 py-2 tracking-wider text-base"
 				>
 					learn more

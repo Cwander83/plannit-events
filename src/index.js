@@ -30,8 +30,8 @@ function Index() {
 
 	return (
 		<FormContextProvider>
-			{/* <Router> */}
-				<Router basename={"/plannit-events/"}>
+			<Router>
+				{/* <Router basename={"/plannit-events/"}> */}
 				<Layout>
 					<Header />
 					<Switch>{routes}</Switch>

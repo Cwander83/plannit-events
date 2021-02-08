@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 
 import { NavLink, Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
@@ -10,10 +10,12 @@ import HamburgerMenu from '../components/HamburgerMenu.jsx';
 
 import { links } from '../utils/menu.js';
 
+//import useDocumentScrollThrottled from '../hooks/useDocumentScrollThrottled.jsx';
+
 const Header = () => {
 	return (
 		<header
-			className="w-full bg-white flex flex-col justify-center shadow items-center
+			className=" w-full bg-white flex flex-col justify-center shadow items-center
 		 md:flex-row md:justify-between md:items-center"
 		>
 			<img

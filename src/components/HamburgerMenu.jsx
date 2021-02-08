@@ -17,7 +17,7 @@ export default function HamburgerMenu() {
 				<>
 					<Menu.Button className="lg:hidden outline-none w-8 mb-3 md:mb-0 md:mr-9 md:w-12 active:outline-none focus:outline-none">
 						<svg
-							style={{ transition: 'all .15s ease' }}
+							style={{ transition: 'all .60s ease' }}
 							className={`${open ? 'transform rotate-90' : ''}  outline-none`}
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"

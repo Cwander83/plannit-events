@@ -15,7 +15,7 @@ export default function HamburgerMenu() {
 		<Menu className="mr-9 w-12 lg:hidden">
 			{({ open }) => (
 				<>
-					<Menu.Button className="lg:hidden outline-none w-8 mb-3 md:mb-0 md:mr-9 md:w-12 active:outline-none focus:outline-none">
+					<Menu.Button className="lg:hidden outline-none w-8 mr-4 md:mr-4 md:mb-0 md:w-12 active:outline-none focus:outline-none">
 						<svg
 							style={{ transition: 'all .60s ease' }}
 							className={`${open ? 'transform rotate-90' : ''}  outline-none`}
@@ -33,7 +33,7 @@ export default function HamburgerMenu() {
 						</svg>
 					</Menu.Button>
 
-					<Menu.Items className="absolute z-10 mx-auto md:right-20 top-24 md:top-16 w-56 mt-2  bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none">
+					<Menu.Items className="absolute z-10 mx-auto right-12 top-9 md:top-16 w-56 mt-2  bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none">
 						<h4 className="mx-auto py-4 text-center bg-primary text-secondary text-lg">
 							Navigation
 						</h4>

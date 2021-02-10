@@ -7,7 +7,7 @@ const SplitSection = ({
 	fade,
 	delay,
 }) => (
-	<section className="py-5 lg:py-0">
+	<section className="py-3 sm:py-0">
 		<div
 			data-aos={`${fade}`}
 			data-aos-easing="ease-in-out"
@@ -17,9 +17,9 @@ const SplitSection = ({
 			data-aos-mirror="true"
 			className="w-auto mx-0  items-center flex flex-col md:flex-row"
 		>
-			<div className="md:w-1/2 flex px-4 sm:px-0">{primarySlot}</div>
+			<div className="md:w-1/2 flex px-4 sm:px-4">{primarySlot}</div>
 			<div
-				className={`mt-10 lg:mt-0 w-full md:w-1/2 ${
+				className={`mt-10 sm:mt-0 w-full md:w-1/2 ${
 					reverseOrder && `order-last md:order-first`
 				}`}
 			>

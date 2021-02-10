@@ -10,7 +10,7 @@ const Landing = () => {
 		<div id="#" className="h-auto ">
 			{/* landing title and header image */}
 			<div
-				className="relative w-full max-h-screen h-80 lg:h-108 shadow-md "
+				className="relative w-full max-h-screen h-108 shadow-md "
 				style={{
 					background: `linear-gradient(
 					rgba(0, 0, 0, 0.5),
@@ -22,30 +22,36 @@ const Landing = () => {
 					backgroundAttachment: 'fixed',
 				}}
 			>
-				<h1 className="absolute top-44 left-6 md:left-14 text-xl sm:text-2xl md:text-4xl text-secondary font-medium tracking-wide">
+				<h1 className="absolute bottom-60 pl-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-secondary font-medium tracking-wide">
 					Plannit's Event Planning
 				</h1>
-				<h2 className="absolute top-56 text-xl lg:text-2xl text-gray-light tracking-wider font-semibold antialiased w-full text-left pl-8 sm:pl-12 pr-3 lg:pl-20">
+				<h2 className="absolute w-2/3 sm:w-full bottom-44  sm:bottom-48 text-lg lg:text-2xl text-gray-light tracking-wider font-semibold antialiased  text-left pl-8 ">
+					Birthdays, Weddings, Company Outings
+				</h2>
+				<h2 className="absolute bottom-28 sm:bottom-40 text-lg lg:text-2xl text-gray-light tracking-wider font-semibold antialiased w-full text-left pl-8 ">
+					Plannit provides the convenience of creating your own event.
+				</h2>
+				{/* <h2 className="absolute top-56 text-xl lg:text-2xl text-gray-light tracking-wider font-semibold antialiased w-full text-left pl-8 ">
 					Plannit provides the convenience
 				</h2>
-				<h2 className="absolute bottom-20 text-xl lg:text-2xl text-gray-light tracking-wider font-semibold antialiased w-full text-left pl-8 sm:pl-12 pr-3 lg:pl-20">
+				<h2 className="absolute bottom-20 text-xl lg:text-2xl text-gray-light tracking-wider font-semibold antialiased w-full text-left pl-8 ">
 					of creating your own event.
-				</h2>
+				</h2> */}
 				{/* TODO
 				 add a button in the middle of the image 
 				 says start planning
 				 */}
-				<div className="absolute bottom-10 left-12 ">
+				<div className="absolute bottom-10 right-12 md:right-20 text-lg">
 					<Link
 						to="/event-builder"
-						className=" text-secondary shadow-md uppercase rounded-sm bg-primary text-bold px-2 py-2 tracking-wider text-base "
+						className=" text-gray-light shadow-md uppercase rounded-sm bg-primary text-bold p-3 mx-1 tracking-wider text-base "
 					>
 						start planning
 					</Link>
 					<NavHashLink
 						smooth
 						to="/#about"
-						className="text-primary shadow-md  uppercase rounded-sm bg-secondary text-bold  px-4 py-2 tracking-wider text-base"
+						className="text-gray-darkest shadow-md  uppercase rounded-sm bg-secondary text-bold mx-1 p-3 tracking-wider text-base"
 					>
 						learn more
 					</NavHashLink>

@@ -8,16 +8,13 @@ import Logo from '../images/icons/logo_header-2.png';
 
 import HamburgerMenu from '../components/HamburgerMenu.jsx';
 
-import { links } from '../utils/menu.js';
+import { links, scrollWithOffset } from '../utils/menu.js';
 
 //import useDocumentScrollThrottled from '../hooks/useDocumentScrollThrottled.jsx';
 
 const Header = () => {
 	return (
-		<header
-			className=" w-full bg-white flex flex-col justify-center shadow items-center
-		 md:flex-row md:justify-between md:items-center"
-		>
+		<header className=" fixed z-10 w-full bg-white flex justify-between shadow items-center md:flex-row md:justify-between md:items-center bg-opacity-">
 			<img
 				className="w-24 md:w-36 md:ml-9"
 				src={Logo}
@@ -32,6 +29,7 @@ const Header = () => {
 								key={index}
 								to={link.location}
 								className="mx-1"
+								scroll={(el) => scrollWithOffset(el, 150)}
 							>
 								{link.title}
 							</NavHashLink>

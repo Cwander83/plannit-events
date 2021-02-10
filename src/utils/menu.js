@@ -12,3 +12,12 @@ export const links = [
 		location: '/#about',
 	},
 ];
+
+export const scrollWithOffset = (el, offset) => {
+	const elementPosition = el.offsetTop - offset;
+	window.scroll({
+		top: elementPosition,
+		left: 0,
+		behavior: 'smooth',
+	});
+};

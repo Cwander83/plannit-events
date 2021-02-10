@@ -42,7 +42,7 @@ const Footer = () => {
 			<div className="text-center text-secondary sm:text-center">
 				<h2>Copyright &copy; 2021 Plannit Events LLC.</h2>
 				<h2>All Rights Reserved</h2>
-				<h2>Site built by Chris Wander</h2>
+				<h2>Site built by </h2>
 			</div>
 		</footer>
 	);

@@ -11,7 +11,7 @@ import Theme from '../../images/theme.jpg';
 const Categories = () => {
 	return (
 		<div id="categories" className="py-12">
-			<div className=" max-w-full mx-auto px-4 sm:px-6 lg:px-0 ">
+			<div className=" max-w-full mx-auto px-0 lg:px-0 ">
 				<SectionTitle
 					title="Plannit Services"
 					subTitle="Planning an event has never been easy."
@@ -22,10 +22,10 @@ const Categories = () => {
 					fade="fade-right"
 					primarySlot={
 						<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
-							<h3 className="text-3xl font-semibold leading-tight">
+							<h3 className=" text-xl lg:text-3xl font-semibold leading-tight">
 								Entertainment
 							</h3>
-							<p className="mt-8 text-xl text-gray-dark leading-relaxed">
+							<p className="mt-8 text-lg lg:text-xl text-gray-dark leading-relaxed">
 								Explore the options Plannit offers to entertain you &#38; your
 								guests.
 								<br />
@@ -42,10 +42,10 @@ const Categories = () => {
 					reverseOrder
 					primarySlot={
 						<div className="lg:pl-16 xl:pl-40 lg:pr-4 xl:pr-20">
-							<h3 className="text-3xl font-semibold leading-tight">
+							<h3 className="text-xl lg:text-3xl font-semibold leading-tight">
 								Food &#38; Gourmet Desserts
 							</h3>
-							<p className="mt-8 text-xl text-gray-dark leading-relaxed">
+							<p className="mt-8 text-lg lg:text-xl text-gray-dark leading-relaxed">
 								Savor your favorite cuisines &#38; desserts that you and your
 								guests will enjoy <br />
 								Cuisines (American, Italian, Barbecue, Mexican, Latin America,
@@ -62,10 +62,10 @@ const Categories = () => {
 					fade="fade-right"
 					primarySlot={
 						<div className="lg:pr-30 xl:pr-40 lg:pl-16 xl:pl-20">
-							<h3 className="text-3xl font-semibold leading-tight">
+							<h3 className="text-xl lg:text-3xl font-semibold leading-tight">
 								Themes &#38; Decorations
 							</h3>
-							<p className="mt-8 text-xl text-gray-dark leading-relaxed">
+							<p className="mt-8 text-lg lg:text-xl text-gray-dark leading-relaxed">
 								Visualize the type of look you want for your event from charming
 								to eclectic and everything in between.
 							</p>
@@ -78,10 +78,10 @@ const Categories = () => {
 					reverseOrder
 					primarySlot={
 						<div className="lg:pl-16 xl:pl-40 lg:pr-4 xl:pr-20">
-							<h3 className="text-3xl font-semibold leading-tight">
+							<h3 className="text-xl lg:text-3xl font-semibold leading-tight">
 								Venues &#38; Rentals
 							</h3>
-							<p className="mt-8 text-xl text-gray-dark leading-relaxed">
+							<p className="mt-8 text-lg lg:text-xl text-gray-dark leading-relaxed">
 								Discover attractive spaces to accommodate and impress your
 								guests by finding all your venue and renting needs.
 								<br />

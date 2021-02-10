@@ -3,7 +3,7 @@ import { Redirect, Route } from 'react-router';
 
 // pages
 import Home from '../pages/Home/Home.jsx';
-import EventForm from '../pages/EventForm.jsx';
+import EventForm from '../pages/EventForm/EventForm.jsx';
 import PartnerForm from '../pages/PartnerForm.jsx';
 
 const routes = (

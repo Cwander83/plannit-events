@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import Layout from './layout/Layout.jsx';
 import Header from './layout/Header.jsx';
 import Footer from './layout/Footer.jsx';
+import MobileMenu from './layout/MobileMenu.jsx';
+import PartnerBanner from './components/PartnerBanner.jsx';
 
 // styles
 import './styles/tailwind.css';
@@ -30,11 +32,13 @@ function Index() {
 
 	return (
 		<FormContextProvider>
-			{/* <Router> */}
-				<Router basename={"/plannit-events/"}>
+			<Router>
+				{/* <Router basename={"/plannit-events/"}> */}
 				<Layout>
 					<Header />
+					<MobileMenu />
 					<Switch>{routes}</Switch>
+					<PartnerBanner />
 					<Footer />
 				</Layout>
 			</Router>

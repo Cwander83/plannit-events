@@ -1,6 +1,6 @@
 export const links = [
 	{
-		title: "Plannit's Services",
+		title: 'Services',
 		location: '/#categories',
 	},
 	{
@@ -8,7 +8,14 @@ export const links = [
 		location: '/#how-to-plan',
 	},
 	{
-		title: 'About Us',
+		image: 'Logo',
+		className: "w-24 md:w-40",
+		location: '/#',
+		alt:"Plannit event company"
+	},
+
+	{
+		title: 'About',
 		location: '/#about',
 	},
 ];

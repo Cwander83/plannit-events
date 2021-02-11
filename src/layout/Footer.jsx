@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
 import { links } from '../utils/menu.js';
@@ -10,7 +10,7 @@ import Logo from '../images/icons/footer_logo_4.png';
 
 const Footer = () => {
 	return (
-		<footer className=" w-full flex flex-col sm:flex-row justify-evenly items-center bg-primary py-2.5">
+		<footer className=" w-full flex flex-col sm:flex-row justify-evenly items-center bg-primary py-6 sm:py-2.5">
 			<div className="flex flex-col text-secondary text-lg text-medium sm:text-left h-full my-4 tracking-wider">
 				<h3 className="text-gray-light text-lg uppercase mb-4 border-b-2 border-gray-dark pl-3">
 					site map
@@ -29,9 +29,12 @@ const Footer = () => {
 						</React.Fragment>
 					);
 				})}
-				<Link className="mx-1" to="/event-builder">
+				<NavLink className="mx-1" to="/event-builder">
 					Event Builder
-				</Link>
+				</NavLink>
+				<NavLink className="mx-1" to="/partner-form">
+					Plannit Partnership
+				</NavLink>
 			</div>
 
 			<img

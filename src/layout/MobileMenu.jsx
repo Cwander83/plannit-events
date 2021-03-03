@@ -131,14 +131,14 @@ function MobileMenu() {
 											</NavHashLink>
 										</Menu.Item>
 
-										{/* <Menu.Item>
+										<Menu.Item>
 											<NavLink
 												to="/event-builder"
 												className=" text-gray-darkest flex justify-between w-full px-6 py-2 text-sm leading-5 text-left"
 											>
 												Event Builder
 											</NavLink>
-										</Menu.Item> */}
+										</Menu.Item>
 										<Menu.Item>
 											<NavLink
 												to="/partner-form"

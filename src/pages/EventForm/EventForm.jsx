@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-//import Container from '../../container/Container.jsx';
+import ComingSoon from '../../components/ComingSoon.jsx';
 import StepOne from './Steps/StepOne.jsx';
 import StepTwo from './Steps/StepTwo.jsx';
 
@@ -15,6 +15,13 @@ export default function EventForm() {
 		setStep(step - 1);
 	};
 
+	// switch (step) {
+	// 	case 1:
+	// 		return <ComingSoon />;
+
+	// 	default:
+	// 		throw new Error('Unknown Step');
+	// }
 	switch (step) {
 		case 1:
 			return <StepOne nextStep={nextStep} />;

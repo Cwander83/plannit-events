@@ -61,6 +61,8 @@ const Header = () => {
 			</NavHashLink>
 
 			<span className="text-gray-dark">&bull;</span>
+			{/* // TODO replace with builder when done */}
+			{/* <NavLink className="mx-5" to="/#"> */}
 			<NavLink className="mx-5" to="/event-builder">
 				Event Builder
 			</NavLink>

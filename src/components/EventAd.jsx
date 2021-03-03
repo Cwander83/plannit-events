@@ -16,7 +16,9 @@ const EventAd = () => (
 			<div className="mt-8 lex lg:mt-0 lg:flex-shrink-0">
 				<div className="inline-flex rounded-md shadow">
 					<Link
-						to="/event-builder"
+					// TODO replace when builder done
+						// to="/event-builder"
+						to="/"
 						className="inline-flex items-center justify-center px-5 py-3 border border-black text-lg tracking-wider font-semibold rounded-md text-primary bg-secondary hover:bg-opacity-80"
 					>
 						Get started

@@ -8,7 +8,7 @@ const PartnerBanner = () => {
 	return (
 		<>
 			{open && (
-				<div className="fixed bottom-14 left-3 sm:left-1/3 w-11/12 sm:w-auto mx-auto py-6 flex justify-between px-3 text-base shadow-lg rounded-lg bg-primary text-gray-light">
+				<div className="fixed bottom-0  w-full  mx-0 py-6 flex justify-between px-6 text-base shadow-lg  bg-primary text-gray-light">
 					<NavLink
 						className="px-4"
 						to="/partner-form"
@@ -20,7 +20,7 @@ const PartnerBanner = () => {
 					</NavLink>
 					<button onClick={() => setOpen(false)}>
 						<svg
-							className="w-7 h-7 text-black"
+							className="w-8 h-8 text-black"
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 20 20"
 							fill="currentColor"

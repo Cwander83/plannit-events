@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import ComingSoon from '../../components/ComingSoon.jsx';
 import StepOne from './Steps/StepOne.jsx';
 import StepTwo from './Steps/StepTwo.jsx';
+import StepThree from './Steps/StepThree.jsx';
 
 export default function EventForm() {
 	const [step, setStep] = useState(1);
@@ -22,11 +23,14 @@ export default function EventForm() {
 	// 	default:
 	// 		throw new Error('Unknown Step');
 	// }
+	
 	switch (step) {
 		case 1:
 			return <StepOne nextStep={nextStep} />;
 		case 2:
 			return <StepTwo nextStep={nextStep} prevStep={prevStep} />;
+		case 3:
+			return <StepThree nextStep={nextStep} prevStep={prevStep} />;
 
 		default:
 			throw new Error('Unknown Step');

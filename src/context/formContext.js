@@ -25,17 +25,25 @@ const FormContextProvider = (props) => {
 		price: '',
 		date: '',
 		time: '',
+		djMusicGenre: '',
+		djExtras: '',
+		djTime: '',
 	});
-	const [services, setServices] = useState({
-		entertainment: false,
-		rentals: false,
-		floralArrangements: false,
-		food: false,
-		desserts: false,
-		photographer: false,
-		videographer: false,
-		theme: false,
+
+	const [checkBoxes, setCheckBoxes] = useState({
+		dj: false,
+		liveBand: false,
+		Clowns: false,
+		Comedian: false,
+		other: false,
 	});
+
+	const checkboxHandler = (e) => {
+		let value =
+			e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+
+		setCheckBoxes({ ...checkBoxes, [e.target.name]: value });
+	};
 	// ** do you want to add a stepper icons colors at top ???
 	// const [icons, setIcons] = useState({
 	// 	eventDetails: false,
@@ -49,12 +57,7 @@ const FormContextProvider = (props) => {
 		let name = e.target.name;
 		setPartnerForm({ ...partnerForm, [name]: value });
 	};
-	const handleServices = (e) => {
-		let value = e.target.value;
 
-		let name = e.target.name;
-		setServices({ ...partnerForm, [name]: value });
-	};
 	const handleEventForm = (e) => {
 		let value =
 			e.target.type === 'checkbox' ? e.target.checked : e.target.value;
@@ -67,19 +70,16 @@ const FormContextProvider = (props) => {
 		event.preventDefault();
 	};
 
-	
-	// console.log(object);
-
-	console.log(`partner From : ${JSON.stringify(services, null, 2)}`);
+	console.log(`Event Form: ${JSON.stringify(eventForm, null, 2)}`);
 	return (
 		<FormContext.Provider
 			value={{
 				partnerForm,
+				handlePartnerForm,
 				eventForm,
 				handleEventForm,
-				services,
-				handleServices,
-				
+				checkBoxes,
+				checkboxHandler
 			}}
 		>
 			{props.children}

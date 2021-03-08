@@ -1,120 +1,112 @@
 import React, { useContext } from 'react';
-import EventFormHeader from '../../../components/EventFormHeader.jsx';
 
+// components
 import Container from '../../../container/Container.jsx';
+import EventFormHeader from '../../../components/EventFormHeader.jsx';
+import DJ from '../Sections/DJ.jsx';
 
+// context
 import { FormContext } from '../../../context/formContext.js';
 
+// external stylesheet
 import { styles } from '../../../styles/styles.js';
 
 const StepTwo = ({ prevStep, nextStep }) => {
-	const { service, handleServices } = useContext(FormContext);
+	let { checkBoxes, checkboxHandler } = useContext(FormContext);
+
 	return (
 		<Container padded>
-			<EventFormHeader title="Services Required" />
-			<div className="flex flex-col justify-center text-left my-3.5">
-				<div className={styles.divStyle}>
-					<label htmlFor="entertainment" className={styles.checkboxLabelStyle}>
-						<input
-							className={styles.checkboxStyle}
-							type="checkbox"
-							name="entertainment"
-							id="entertainment"
-							onChange={(e) => handleServices(e)}
-						/>
-						Entertainment
-					</label>
-				</div>
-				<div className={styles.divStyle}>
-					<label htmlFor="rentals" className={styles.checkboxLabelStyle}>
-						<input
-							className={styles.checkboxStyle}
-							type="checkbox"
-							name="rentals"
-							id="rentals"
-							onChange={(e) => handleServices(e)}
-						/>
-						Event Rentals
-					</label>
-				</div>
-				<div className={styles.divStyle}>
-					<label
-						htmlFor="floralArrangements"
-						className={styles.checkboxLabelStyle}
-					>
-						<input
-							className={styles.checkboxStyle}
-							type="checkbox"
-							name="floralArrangements"
-							id="floralArrangements"
-							onChange={(e) => handleServices(e)}
-						/>
-						Floral Arrangements
-					</label>
-				</div>
-				<div className={styles.divStyle}>
-					<label htmlFor="food" className={styles.checkboxLabelStyle}>
-						<input
-							className={styles.checkboxStyle}
-							type="checkbox"
-							name="food"
-							id="food"
-							onChange={(e) => handleServices(e)}
-						/>
-						Food
-					</label>
-				</div>
-				<div className={styles.divStyle}>
-					<label htmlFor="desserts" className={styles.checkboxLabelStyle}>
-						<input
-							className={styles.checkboxStyle}
-							type="checkbox"
-							name="desserts"
-							id="desserts"
-							onChange={(e) => handleServices(e)}
-						/>
-						Gourmet Desserts
-					</label>
-				</div>
-				<div className={styles.divStyle}>
-					<label htmlFor="photographer" className={styles.checkboxLabelStyle}>
-						<input
-							className={styles.checkboxStyle}
-							type="checkbox"
-							name="photographer"
-							id="photographer"
-							onChange={(e) => handleServices(e)}
-						/>
-						Photography
-					</label>
-				</div>
-				<div className={styles.divStyle}>
-					<label htmlFor="videographer" className={styles.checkboxLabelStyle}>
-						<input
-							className={styles.checkboxStyle}
-							type="checkbox"
-							name="videographer"
-							id="videographer"
-							onChange={(e) => handleServices(e)}
-						/>
-						Videographer
-					</label>
-				</div>
-				<div className={styles.divStyle}>
-					<label htmlFor="theme" className={styles.checkboxLabelStyle}>
-						<input
-							className={styles.checkboxStyle}
-							type="checkbox"
-							name="theme"
-							id="theme"
-							onChange={(e) => handleServices(e)}
-						/>
-						Theme/Decorations
-					</label>
-				</div>
+			<EventFormHeader title="Entertainment" />
+
+			{/* dj checkbox */}
+			<div className={styles.divStyle}>
+				<label
+					htmlFor="dj"
+					className={`${styles.checkboxLabelStyle} text-left`}
+				>
+					<input
+						className={styles.checkboxStyle}
+						type="checkbox"
+						checked={checkBoxes.dj}
+						name="dj"
+						id="dj"
+						onChange={(e) => checkboxHandler(e)}
+					/>
+					Live DJ
+				</label>
+			</div>
+			<DJ open={checkBoxes.dj} />
+
+			{/* Live Band checkbox */}
+			<div className={styles.divStyle}>
+				<label
+					htmlFor="liveBand"
+					className={`${styles.checkboxLabelStyle} text-left`}
+				>
+					<input
+						className={styles.checkboxStyle}
+						type="checkbox"
+						checked={checkBoxes.liveBand}
+						name="liveBand"
+						id="liveBand"
+						onChange={(e) => checkboxHandler(e)}
+					/>
+					Live Band
+				</label>
+			</div>
+			{/* clowns checkbox */}
+			<div className={styles.divStyle}>
+				<label
+					htmlFor="clowns"
+					className={`${styles.checkboxLabelStyle} text-left`}
+				>
+					<input
+						className={styles.checkboxStyle}
+						type="checkbox"
+						checked={checkBoxes.clowns}
+						name="clowns"
+						id="clowns"
+						onChange={(e) => checkboxHandler(e)}
+					/>
+					Clowns
+				</label>
+			</div>
+			{/* comedian checkbox */}
+			<div className={styles.divStyle}>
+				<label
+					htmlFor="comedian"
+					className={`${styles.checkboxLabelStyle} text-left`}
+				>
+					<input
+						className={styles.checkboxStyle}
+						type="checkbox"
+						checked={checkBoxes.comedian}
+						name="comedian"
+						id="comedian"
+						onChange={(e) => checkboxHandler(e)}
+					/>
+					Comedian
+				</label>
+			</div>
+			{/* other checkbox */}
+			<div className={styles.divStyle}>
+				<label
+					htmlFor="other"
+					className={`${styles.checkboxLabelStyle} text-left`}
+				>
+					<input
+						className={styles.checkboxStyle}
+						type="checkbox"
+						checked={checkBoxes.other}
+						name="other"
+						id="other"
+						onChange={(e) => checkboxHandler(e)}
+					/>
+					Other
+				</label>
 			</div>
 
-			<div className="flex justify-end">
+			<div className="flex justify-center sm:justify-end">
 				<button
 					onClick={prevStep}
 					className="mx-2 px-5 py-3 text-gray-lightest bg-primary rounded-sm shadow"
@@ -125,7 +117,7 @@ const StepTwo = ({ prevStep, nextStep }) => {
 					onClick={nextStep}
 					className="mx-2 px-5 py-3 text-gray-lightest bg-primary rounded-sm shadow"
 				>
-					Next Services
+					Next
 				</button>
 			</div>
 		</Container>

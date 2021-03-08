@@ -1,5 +1,6 @@
 export const styles = {
 	divStyle: 'px-3 py-2 w-full',
+	divCheckboxStyle: 'w-full',
 	labelStyle: 'block text-md md:text-xl font-medium text-gray-darkest',
 
 	inputStyle:
@@ -7,6 +8,5 @@ export const styles = {
 	checkboxStyle:
 		'w-6 h-6 mr-3 text-primary focus:border-primary focus:ring-0 focus:border-3 focus:text-xl text-center text-xl tracking-wider',
 	checkboxLabelStyle:
-		'block text-md md:text-xl font-medium text-gray-darkest mx-auto w-full md:w-1/2',
+		'block text-md md:text-xl font-medium text-gray-darkest mx-auto w-full',
 };
-

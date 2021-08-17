@@ -14,7 +14,8 @@ const PartnerForm = () => {
 
 	return (
 		<div className="flex flex-col justify-center">
-			<div>
+			<div className="h-24 w-full bg-primary"></div>
+			<div className="">
 				<h1 className="w-full text-lg lg:text-4xl font-semibold font-title text-center mt-7">
 					Partnership Contact Form
 				</h1>
@@ -23,10 +24,10 @@ const PartnerForm = () => {
 					Get Started by telling us about your business.
 				</h1>
 			</div>
-			<div className="text-center mb-12">
-				<div className=" w-11/12 mx-auto">
+			<div className="text-center mb-12 ">
+				<div className=" w-11/12 mx-auto ">
 					<form
-						className="w-full  mt-6 mx-auto max-w-4xl border-primary border-2 p-6 sm:p-8 flex flex-wrap"
+						className="w-full mt-6 mx-auto max-w-4xl border-primary border-2 p-6 sm:p-8 flex flex-wrap"
 						action="#"
 						method="POST"
 					>

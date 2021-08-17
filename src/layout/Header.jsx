@@ -1,59 +1,82 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
 // icon
 import Logo from '../images/icons/logo_header-2.png';
+import Logo2 from '../images/icons/footer_logo_4.png';
 
-import HamburgerMenu from '../components/HamburgerMenu.jsx';
-
-import { links } from '../utils/menu.js';
-
-//import useDocumentScrollThrottled from '../hooks/useDocumentScrollThrottled.jsx';
+import { scrollWithOffset } from '../utils/menu.js';
 
 const Header = () => {
+	const [header, setHeader] = useState(true);
+
+	const listenScrollEvent = () => {
+		window.scrollY > 10 ? setHeader(false) : setHeader(true);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', listenScrollEvent);
+	}, []);
+
 	return (
 		<header
-			className=" w-full bg-white flex flex-col justify-center shadow items-center
-		 md:flex-row md:justify-between md:items-center"
+			className={`${
+				header
+					? 'bg-opacity-0 text-gray-light py-8'
+					: 'bg-opacity-90 text-primary shadow-md py-3'
+			} hidden md:flex fixed top-0 transition-all duration-500 z-10 w-full bg-white  px-10 items-center flex-row justify-center`}
 		>
-			<img
-				className="w-24 md:w-36 md:ml-9"
-				src={Logo}
-				alt="Plannit event company"
-			/>
-			<div className="hidden lg:block text-primary text-xl">
-				{links.map((link, index) => {
-					return (
-						<React.Fragment key={index}>
-							<NavHashLink
-								smooth
-								key={index}
-								to={link.location}
-								className="mx-1"
-							>
-								{link.title}
-							</NavHashLink>
-							<span className="text-gray-light">/</span>
-						</React.Fragment>
-					);
-				})}
-				<NavLink className="mx-1" to="/event-builder">
-					Event Builder
-				</NavLink>
-			</div>
-
-			<Link
-				to="/partner-form"
-				className="hidden shadow-sm mr-9 text-secondary text-sm rounded tracking-wider lg:flex flex-row p-3 bg-primary
-		  hover:bg-opacity-80 hover:text-opacity-100 active:bg-opacity-100"
+			<NavHashLink
+				smooth
+				to="/#categories"
+				className="mx-5"
+				scroll={(el) => scrollWithOffset(el, 50)}
 			>
-				<p>Partner with</p>
-				<p>&nbsp;Plannit</p>
-			</Link>
+				Services
+			</NavHashLink>
+			<span className="text-gray-dark">&bull;</span>
+			<NavHashLink
+				smooth
+				to="/#how-to-plan"
+				className="mx-5"
+				scroll={(el) => scrollWithOffset(el, 50)}
+			>
+				How to Plan
+			</NavHashLink>
+			<span className="text-gray-dark">&bull;</span>
 
-			<HamburgerMenu />
+			<NavHashLink
+				smooth
+				to="/#"
+				className="mx-5"
+				scroll={(el) => scrollWithOffset(el, 50)}
+			>
+				<img
+					className="w-20"
+					src={`${!header ? Logo : Logo2}`}
+					alt="Plannit event company"
+				/>
+			</NavHashLink>
+
+			<span className="text-gray-dark">&bull;</span>
+			{/* // TODO replace with builder when done */}
+			{/* <NavLink className="mx-5" to="/#"> */}
+			<NavLink className="mx-5" to="/event-builder">
+				Event Builder
+			</NavLink>
+			<span className="text-gray-dark">&bull;</span>
+			<NavHashLink smooth to="/#about" className="mx-5">
+				About Us
+			</NavHashLink>
+
+			{/* <Link
+					to="/partner-form"
+					className="p-2 rounded-full border-2 border-primary"
+				>
+					Partner with Plannit
+				</Link> */}
 		</header>
 	);
 };

@@ -29,7 +29,7 @@ const HowTo = () => {
 
 					<div className="relative wrap overflow-hidden px-4 sm:px-10 py-2 h-full">
 						<div
-							className="border-2-2 left-1/2 absolute border-opacity-20 bg-gray-lightest border-gray-lightest  border h-5/6 "
+							className="border-2-2 left-1/2 absolute border-opacity-20 bg-gray-lightest border-gray-lightest  border  h-full "
 							// style={{left: "50%"}}
 						></div>
 						{/* <!-- right timeline --> */}

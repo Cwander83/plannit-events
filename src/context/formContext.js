@@ -28,13 +28,26 @@ const FormContextProvider = (props) => {
 		djMusicGenre: '',
 		djExtras: '',
 		djTime: '',
+		liveBandGenre: '',
+		liveBandSize: '',
+		liveBandTime: '',
+		clownTime: '',
+
+		magicShow: false,
+		jugglers: false,
+		facePainting: false,
+		balloonTwisting: false,
+		puppetShow: false,
+		idealComedian: '',
+		comedianTime: '',
+		entertainmentOther: ''
 	});
 
 	const [checkBoxes, setCheckBoxes] = useState({
 		dj: false,
 		liveBand: false,
-		Clowns: false,
-		Comedian: false,
+		clowns: false,
+		comedian: false,
 		other: false,
 	});
 
@@ -63,7 +76,8 @@ const FormContextProvider = (props) => {
 			e.target.type === 'checkbox' ? e.target.checked : e.target.value;
 
 		let name = e.target.name;
-		setEventForm({ ...partnerForm, [name]: value });
+		console.log('name: ' + name);
+		setEventForm({ ...eventForm, [name]: value });
 	};
 
 	const partnerFormSubmit = () => {
@@ -79,7 +93,7 @@ const FormContextProvider = (props) => {
 				eventForm,
 				handleEventForm,
 				checkBoxes,
-				checkboxHandler
+				checkboxHandler,
 			}}
 		>
 			{props.children}

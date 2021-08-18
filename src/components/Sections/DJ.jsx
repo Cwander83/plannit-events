@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 
 // context
-import { FormContext } from '../../../context/formContext.js';
+import { FormContext } from '../../context/formContext.js';
 
 // external stylesheet
-import { styles } from '../../../styles/styles.js';
+import { styles } from '../../styles/styles.js';
 
 const DJ = ({ open }) => {
 	let { handleEventForm, eventForm } = useContext(FormContext);
@@ -17,42 +17,39 @@ const DJ = ({ open }) => {
 		>
 			<label className={styles.labelStyle} htmlFor="djMusicGenre">
 				What type(s) of music genre would like to have?
-				<textarea
+				<input
 					className={styles.inputStyle}
 					type="text"
 					name="djMusicGenre"
 					value={eventForm.djMusicGenre}
-					placeholder="Example: Hip-Hop/Rap, Jazz, Latino, Pop, Reggae, Rock."
+					placeholder="Hip-Hop/Rap, Jazz, Rock."
 					id="djMusicGenre"
-					rows="2"
 					onChange={(e) => handleEventForm(e)}
-				></textarea>
+				/>
 			</label>
 
 			<label className={styles.labelStyle} htmlFor="djExtras">
 				Would you like any extra services?
-				<textarea
+				<input
 					className={styles.inputStyle}
 					type="text"
 					name="djExtras"
-					placeholder="Lighting Machine, Fog Machine, Microphones..."
+					placeholder="Fog Machine.."
 					id="djExtras"
-					rows="2"
 					onChange={(e) => handleEventForm(e)}
-				></textarea>
+				/>
 			</label>
 
 			<label className={styles.labelStyle} htmlFor="djTime">
-				How time and how long do you need the DJ for?
-				<textarea
+				How long do you need the DJ for?
+				<input
 					className={styles.inputStyle}
 					type="text"
 					name="djTime"
-					placeholder="Maybe only a few hours or the whole event??"
+					placeholder="2 Hours.."
 					id="djTime"
-					rows="2"
 					onChange={(e) => handleEventForm(e)}
-				></textarea>
+				/>
 			</label>
 		</div>
 	);

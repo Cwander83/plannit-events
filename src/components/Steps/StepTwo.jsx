@@ -1,17 +1,22 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 // components
-import Container from '../../../container/Container.jsx';
-import EventFormHeader from '../../../components/EventFormHeader.jsx';
+import Container from '../../container/Container.jsx';
+import EventFormHeader from '../EventFormHeader.jsx';
 import DJ from '../Sections/DJ.jsx';
+import LiveBand from '../Sections/LiveBand.jsx';
+import Clowns from '../Sections/Clowns.jsx';
+import Comedian from '../Sections/Comedian.jsx';
 
 // context
-import { FormContext } from '../../../context/formContext.js';
+import { FormContext } from '../../context/formContext.js';
 
 // external stylesheet
-import { styles } from '../../../styles/styles.js';
+import { styles } from '../../styles/styles.js';
+import Other from '../Sections/Other.jsx';
 
 const StepTwo = ({ prevStep, nextStep }) => {
+	// connect to context if they check opens questions on that entertainment
 	let { checkBoxes, checkboxHandler } = useContext(FormContext);
 
 	return (
@@ -22,7 +27,9 @@ const StepTwo = ({ prevStep, nextStep }) => {
 			<div className={styles.divStyle}>
 				<label
 					htmlFor="dj"
-					className={`${styles.checkboxLabelStyle} text-left`}
+					className={`${checkBoxes.dj ? 'bg-gray-light' : ''} ${
+						styles.checkboxLabelStyle
+					} text-left`}
 				>
 					<input
 						className={styles.checkboxStyle}
@@ -35,13 +42,16 @@ const StepTwo = ({ prevStep, nextStep }) => {
 					Live DJ
 				</label>
 			</div>
+			{/* dj questions */}
 			<DJ open={checkBoxes.dj} />
 
 			{/* Live Band checkbox */}
 			<div className={styles.divStyle}>
 				<label
 					htmlFor="liveBand"
-					className={`${styles.checkboxLabelStyle} text-left`}
+					className={`${checkBoxes.liveBand ? 'bg-gray-light' : ''} ${
+						styles.checkboxLabelStyle
+					} text-left`}
 				>
 					<input
 						className={styles.checkboxStyle}
@@ -54,11 +64,16 @@ const StepTwo = ({ prevStep, nextStep }) => {
 					Live Band
 				</label>
 			</div>
+
+			{/* live band questions */}
+			<LiveBand open={checkBoxes.liveBand} />
 			{/* clowns checkbox */}
 			<div className={styles.divStyle}>
 				<label
 					htmlFor="clowns"
-					className={`${styles.checkboxLabelStyle} text-left`}
+					className={`${checkBoxes.clowns ? 'bg-gray-light' : ''} ${
+						styles.checkboxLabelStyle
+					} text-left`}
 				>
 					<input
 						className={styles.checkboxStyle}
@@ -71,11 +86,15 @@ const StepTwo = ({ prevStep, nextStep }) => {
 					Clowns
 				</label>
 			</div>
+
+			<Clowns open={checkBoxes.clowns} />
 			{/* comedian checkbox */}
 			<div className={styles.divStyle}>
 				<label
 					htmlFor="comedian"
-					className={`${styles.checkboxLabelStyle} text-left`}
+					className={`${checkBoxes.comedian ? 'bg-gray-light' : ''} ${
+						styles.checkboxLabelStyle
+					} text-left`}
 				>
 					<input
 						className={styles.checkboxStyle}
@@ -88,11 +107,14 @@ const StepTwo = ({ prevStep, nextStep }) => {
 					Comedian
 				</label>
 			</div>
+			<Comedian open={checkBoxes.comedian} />
 			{/* other checkbox */}
 			<div className={styles.divStyle}>
 				<label
 					htmlFor="other"
-					className={`${styles.checkboxLabelStyle} text-left`}
+					className={`${checkBoxes.other ? 'bg-gray-light' : ''} ${
+						styles.checkboxLabelStyle
+					} text-left`}
 				>
 					<input
 						className={styles.checkboxStyle}
@@ -105,6 +127,8 @@ const StepTwo = ({ prevStep, nextStep }) => {
 					Other
 				</label>
 			</div>
+
+			<Other open={checkBoxes.other} />
 
 			<div className="flex justify-center sm:justify-end">
 				<button

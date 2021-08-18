@@ -1,17 +1,16 @@
 import React, { useContext } from 'react';
 
 // components
-import Container from '../../../container/Container.jsx';
-import EventFormHeader from '../../../components/EventFormHeader.jsx';
+import Container from '../../container/Container.jsx';
+import EventFormHeader from '../EventFormHeader.jsx';
 
 // context
-import { FormContext } from '../../../context/formContext.js';
+import { FormContext } from '../../context/formContext.js';
 
 // external stylesheet
-import { styles } from '../../../styles/styles.js';
+import { styles } from '../../styles/styles.js';
 
 const StepOne = ({ nextStep }) => {
-	
 	let { handleEventForm, eventForm } = useContext(FormContext);
 
 	const [locationCheckbox, setLocationCheckbox] = React.useState(false);
